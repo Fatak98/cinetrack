@@ -6,3 +6,11 @@ export async function searchShows(query) {
     );
     return response.data.map(item => item.show);
 }
+
+export async function getShow(id) {
+const response = await axios.get(
+    "https://api.tvmaze.com/shows/" + id
+);
+
+return response.data;
+}
