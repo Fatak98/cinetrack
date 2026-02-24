@@ -2,6 +2,7 @@ CineTrack 🎬
 
 A React movie discovery app built with React Router and Axios.
 
+
 Users can:
 
 Search TV shows
@@ -9,6 +10,7 @@ Search TV shows
 View show details
 
 Navigate between pages using dynamic routing
+
 
 🚀 Tech Stack:
 
@@ -19,6 +21,7 @@ React Router DOM
 Axios
 
 Vite
+
 
 Features Implemented:
 
@@ -32,6 +35,7 @@ Features Implemented:
 
 ✅ Dynamic navigation using <Link>
 
+
 🔎 How It Works:
 
 User types a query
@@ -43,6 +47,7 @@ Results are stored in state
 Results are rendered dynamically
 
 Clicking a show navigates to /show/:id
+
 
 
 Key Concepts Practiced:
