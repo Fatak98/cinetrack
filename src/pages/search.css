@@ -1,0 +1,90 @@
+.searchPage {
+    width: 100%;
+    margin: 0;
+    padding: 20px 24px 50px;
+    color: white;
+    box-sizing: border-box;
+}
+
+/* search bar full width */
+.searchBar {
+    width: 100%;
+    margin: 0 0 26px;
+    display: flex;
+    gap: 10px;
+}
+
+.searchBar input {
+    flex: 1;
+    min-width: 0;
+    padding: 12px 14px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    outline: none;
+    background: #1c1c1c;
+    color: white;
+    font-size: 15px;
+}
+
+.searchBar button {
+    width: 55px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    background: #e50914;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* grid starts from LEFT (no centered gutter) */
+.searchGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+/* card */
+.movieCard {
+    text-decoration: none;
+    color: white;
+    transition: transform 0.25s ease;
+}
+
+.movieCard:hover {
+    transform: scale(1.05);
+}
+
+/* fixed poster size */
+.posterWrap {
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    border-radius: 14px;
+    overflow: hidden;
+    background: #1a1a1a;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, .45);
+}
+
+.posterWrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.movieTitle {
+    margin-top: 8px;
+    font-size: 14px;
+    opacity: 0.9;
+    line-height: 1.2;
+}
+
+@media (max-width: 520px) {
+    .searchPage {
+        padding: 18px 14px 40px;
+    }
+
+    .searchGrid {
+        gap: 16px;
+    }
+}

@@ -18,20 +18,34 @@ export const WatchList =()=>{
     };
     
     return (
-    <div>
-        <h1>My Watchlist</h1>
+    <div className="watchlist-page">
+        <div className="watchlist-header">
+        <h1 className="watchlist-title">My Watchlist</h1>
+        <div className="watchlist-count">{watchlist.length} items</div>
+        </div>
 
         {watchlist.length === 0 ? (
         <p>No items yet.</p>
         ) : (
-        <ul>
+        <div className="watchlist-grid">
             {watchlist.map((item) => (
-            <li key={item.id}>
-                <Link to={`/show/${item.id}`}>{item.name}</Link>
-                <button onClick={() => handleRemove(item.id)}>remove</button>
-            </li>
+            <div key={item.id} className="watch-card">
+                <Link to={`/show/${item.id}`} className="watch-card">
+                <img
+                    src={item.image || "https://via.placeholder.com/300x450?text=No+Image"}
+                    alt={item.name}
+                />
+                </Link>
+
+                <div className="watch-card-footer">
+                <p className="watch-card-title" title={item.name}>{item.name}</p>
+                <button className="remove-btn" onClick={() => handleRemove(item.id)}>
+                    Remove
+                </button>
+                </div>
+            </div>
             ))}
-        </ul>
+        </div>
         )}
     </div>
     );

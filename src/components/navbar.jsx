@@ -1,11 +1,16 @@
 import { Link } from "react-router-dom";
+import "./Navbar.css";
 
 export const Navbar = () => {
 return (
-    <div style={{ display: "flex", gap: "20px" }}>
-    <Link to="/">Home</Link>
-    <Link to="/research">Search</Link>
-    <Link to="/watchlist">WatchList</Link>
-    </div>
+    <nav className="navbar">
+        <Link to="/" className="nav-logo">
+        CineTrack
+        </Link>
+        <div className="nav-links">
+            <Link to="/search">Search</Link>
+            <Link to="/watchlist">WatchList</Link>
+        </div>
+    </nav>
 );
 };

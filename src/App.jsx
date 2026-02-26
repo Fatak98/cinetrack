@@ -1,6 +1,3 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import { Home } from './pages/home'
 import { Search} from './pages/search'
@@ -9,17 +6,20 @@ import { ShowDetails } from './pages/details'
 import { Route, Routes } from 'react-router-dom'
 import { Navbar } from './components/Navbar'
 
+
 function App() {
   return (
-    <div>
+    <div className="app">
       <Navbar />
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/research' element={<Search />} />
-        <Route path='/watchlist' element={<WatchList />} />
-        <Route path='/show/:id' element={<ShowDetails />} />
-        <Route path='*'>page not exists</Route>
-      </Routes>
+      <div className="container">
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/search' element={<Search />} />
+          <Route path='/watchlist' element={<WatchList />} />
+          <Route path='/show/:id' element={<ShowDetails />} />
+          <Route path='*' element={<div>Page not found</div>} />
+        </Routes>
+      </div>
     </div>
   )
 }
