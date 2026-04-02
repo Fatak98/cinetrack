@@ -3,10 +3,12 @@
     background: #0f0f0f;
     min-height: calc(100vh - 64px);
     color: #fff;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .container {
-    width: min(1200px, 92vw);
+
     margin: 0 auto;
     padding: 18px 0 40px;
 }
@@ -123,14 +125,30 @@
 
 .row {
     display: flex;
-    gap: 12px;
+    gap: 16px;
     overflow-x: auto;
-    padding-bottom: 8px;
+    overflow-y: hidden;
+    padding-bottom: 12px;
     scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
 }
 
 .row::-webkit-scrollbar {
-    display: none;
+    height: 10px;
+}
+
+.row::-webkit-scrollbar-track {
+    background: #1a1a1a;
+    border-radius: 999px;
+}
+
+.row::-webkit-scrollbar-thumb {
+    background: #444;
+    border-radius: 999px;
+}
+
+.row::-webkit-scrollbar-thumb:hover {
+    background: #666;
 }
 
 /* Cards */
@@ -260,12 +278,54 @@
         max-width: 92%;
     }
 
+    .heroTitle {
+        font-size: 22px;
+    }
+
+    .heroSummary {
+        font-size: 13px;
+    }
+
+    .heroKicker {
+        font-size: 10px;
+    }
+
+    .pageTitle {
+        font-size: 22px;
+    }
+
+    .pageSubtitle {
+        font-size: 13px;
+    }
+
+    .rowTitle {
+        font-size: 15px;
+    }
+
+    .cardTitle {
+        font-size: 12px;
+    }
+
     .card {
-        width: 130px;
+        width: 160px; 
     }
 
     .skelPoster {
-        width: 130px;
+        width: 160px;
+    }
+    .feedback-form {
+        width: 90%;
+        padding: 24px;
+    }
+}
+
+@media (max-width: 520px) and (pointer: coarse) {
+    .row {
+        scrollbar-width: none;
+    }
+
+    .row::-webkit-scrollbar {
+        display: none;
     }
 }
 
@@ -275,9 +335,7 @@
     margin: 60px auto;
     padding: 32px;
     background: rgba(28, 28, 28, 0.8);
-    /* Matches your buttons */
     backdrop-filter: blur(10px);
-    /* Glassmorphism effect */
     border-radius: 18px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
@@ -317,7 +375,6 @@
 .feedback-form input:focus,
 .feedback-form textarea:focus {
     border-color: #e50914;
-    /* Your primary red color */
     background: rgba(15, 15, 15, 1);
     box-shadow: 0 0 0 4px rgba(229, 9, 20, 0.15);
 }
@@ -347,12 +404,4 @@
 
 .feedback-form button[type="submit"]:active {
     transform: translateY(0);
-}
-
-/* Responsive adjustment */
-@media (max-width: 520px) {
-    .feedback-form {
-        width: 90%;
-        padding: 24px;
-    }
 }

@@ -5,8 +5,7 @@
 body {
   margin: 0;
   font-family: "Helvetica Neue", Arial, sans-serif;
-  background-color: #141414;
-  color: #ffffff;
+  background: #0f0f0f;
 }
 html, body {
   overflow-x: hidden;

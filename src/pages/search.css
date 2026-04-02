@@ -4,12 +4,15 @@
     padding: 20px 24px 50px;
     color: white;
     box-sizing: border-box;
+    padding-left: 20px;
+    padding-right: 20px;
+    align-items: center;
 }
 
 /* search bar full width */
 .searchBar {
-    width: 100%;
-    margin: 0 0 26px;
+    width: 90%;
+    margin: 0 auto 26px; 
     display: flex;
     gap: 10px;
 }

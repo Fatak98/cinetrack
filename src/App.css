@@ -1,10 +1,10 @@
 /* Default container stays */
 .container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 24px;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  
 }
-
 /* Make search page FULL WIDTH even inside container */
 .container .searchPage {
   width: 100%;
