@@ -88,14 +88,6 @@ Users can easily remove items or navigate back to the show details.
 
 This project focuses on core frontend development concepts:
 
-### State Management
-- `useState` is used to manage UI data such as search results, suggestions, and watchlist items.
-- The UI updates automatically when the state changes.
-
-### Side Effects
-- `useEffect` is used to fetch data from the API when components load.
-- It ensures data is loaded at the right time without unnecessary re-renders.
-
 ### API Integration
 - Axios is used to send asynchronous requests to the TVMaze API.
 - Data is fetched, processed, and displayed dynamically.
