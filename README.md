@@ -126,7 +126,7 @@ This project focuses on core frontend development concepts:
 ## 📦 Installation
 
 ```bash
-git clone https://github.com/yourusername/cinetrack.git
+git clone https://github.com/fatak98/cinetrack.git
 cd cinetrack
 npm install
 npm run dev
